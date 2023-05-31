@@ -1,14 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-// import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  root: "./src",
   build: {
-    rollupOptions: {
-      input: "src/main.tsx", // or 'src/main.ts' if using TypeScript
-    },
+    outDir: "build",
   },
   server: {
     watch: {
